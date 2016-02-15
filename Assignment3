@@ -1,0 +1,53 @@
+//Dont destory script
+using UnityEngine;
+using System.Collections;
+
+public class DontDestroy : MonoBehaviour {
+
+	// Use this for initialization
+	void Awake () {
+		DontDestroyOnLoad (gameObject);
+	}
+
+}
+
+
+
+
+//Load level script
+using UnityEngine;
+using System.Collections;
+using UnityEngine.SceneManagement;
+
+public class LoadScene : MonoBehaviour {
+
+	public void LoadLevelScene() {
+		SceneManager.LoadScene ("GameScene");
+
+	}
+}
+
+
+
+
+//volume control script
+using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;
+
+public class VolumeControl : MonoBehaviour {
+	public AudioSource source;
+	public Slider volumeSlider;
+
+
+	// Update is called once per frame
+	void Update () {
+		source.volume = volumeSlider.value;
+	
+	}
+
+
+
+
+}
+
